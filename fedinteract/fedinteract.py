@@ -43,9 +43,6 @@ class FedInteract:
 	def __init__(self, instance_type, instance_url, username = None, password = None, client_id = None, client_secret = None, access_token = None, api_token = None):
 		"""
 		Create a new FedInteract API wrapper. 
-
-		`create_post()`
-		lkjda
 		"""
 		self.client = None
 		if instance_type in ["mastodon", "pleroma"]:
