@@ -39,12 +39,12 @@ class Fixtodon(Mastodon):
 		json_object = Mastodon.__json_allow_dict_attrs(json_object)
 		return json_object
 
-class FedInteract():
+class FedInteract:
 	def __init__(self, instance_type, instance_url, username = None, password = None, client_id = None, client_secret = None, access_token = None, api_token = None):
 		"""
 		Create a new FedInteract API wrapper. 
 
-
+		`create_post()`
 		lkjda
 		"""
 		self.client = None
@@ -66,6 +66,12 @@ class FedInteract():
 
 			self.client = diaspy.connection.Connection(pod = instance_url, username = username, password = password)
 			self.client.login()
+
+		def create_post(self, content):
+			"""
+			Publish a post from your account.
+			"""
+			pass
 
 class FedInteractError(Exception):
 	# base error
